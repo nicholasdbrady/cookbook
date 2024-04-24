@@ -1,7 +1,7 @@
 ---
-title: 'Markdown Style Guide'
+title: 'Getting started with Phi-3'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jul 01 2022'
+pubDate: 'Apr 24 2024'
 heroImage: '/blog-placeholder-1.jpg'
 ---
 
