@@ -3,6 +3,7 @@ title: 'Deploy and demo Phi-3 in Azure AI'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: 'Apr 26 2024'
 heroImage: '/cookbook/phi-3-hero.png'
+tags: ["Azure AI", "Phi-3", "Model catalog", "Generative AI", "Gradio"]
 ---
 
 In this walkthrough, I'll show you how to get started with `phi-3-mini-instruct` with the Azure AI Model Catalog. We will deploy the model to an endpoint, test the endpoint, and build a simple chat interface using Gradio.
