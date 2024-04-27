@@ -1,0 +1,5 @@
+azure-ai-ml
+azure-identity
+datasets
+gradio
+pandas
