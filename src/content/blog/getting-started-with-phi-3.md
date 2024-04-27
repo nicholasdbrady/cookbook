@@ -2,7 +2,7 @@
 title: 'Deploy and demo Phi-3 in Azure AI'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: 'Apr 26 2024'
-heroImage: '/phi-3-hero.png'
+heroImage: '/cookbook/phi-3-hero.png'
 ---
 
 In this walkthrough, I'll show you how to get started with `phi-3-mini-instruct` with the Azure AI Model Catalog. We will deploy the model to an endpoint, test the endpoint, and build a simple chat interface using Gradio.
@@ -15,7 +15,7 @@ In this walkthrough, I'll show you how to get started with `phi-3-mini-instruct`
  - [Use cases](#use-cases)
  - [Getting started](#getting-started-with-phi-3)
  - [Call an endpoint](#call-an-azure-online-managed-endpoint)
- - [Build a Chat Interface using Gradio](#building-a-chatbot-interface-with-phi-3)
+ - [Build a Chat Interface using Gradio](#building-the-chat-interface)
  - [Conclusion](#conclusion)
 
 ## Introduction
@@ -26,7 +26,7 @@ Azure AI developers, prepare to welcome the newest family member in the world of
   
 The first to make a debut is the Phi-3-mini, a model with 3.8 billion parameters that boasts performance surpassing models twice its size. This marvel of AI architecture is not only more capable but also available now in the Microsoft Azure AI Model Catalog, Hugging Face, and as a NVIDIA NIM microservice. Its nimbleness allows it to operate fluently across various platforms and even on local devices, a feature that guarantees to democratize AI applications further.
 
-![Phi-3 quality](/src/assets/Phi-3-quality.png)
+![Phi-3 quality](/cookbook/src/assets/Phi-3-quality.png)
 
 ### Use Cases  
 - **Local Operation**: Deploy AI in remote areas or on devices with limited connectivity.  
@@ -42,7 +42,7 @@ Before you dive into using Phi-3, you'll need to set up an Azure account if you 
 #### Step 2: Access the Azure AI Model Catalog
 Once your account is set up, navigate to the [Azure AI Model Catalog](https://aka.ms/try-phi3) where you'll find the Phi-3 model(s) listed. You can also browse the 1500+ models available including, Meta, Mistral, Cohere and many more.
 
-![Phi-3 quality](/src/assets/try-phi-3.png)
+![Phi-3 quality](/cookbook/src/assets/try-phi-3.png)
 
 #### Step 3: Deploy to an online managed endpoint
 You can deploy to a real-time endpoint from here directly!
@@ -235,7 +235,7 @@ gr.ChatInterface(
 ```
 This process creates a user-friendly chat interface for the Phi-3 model.
 
-![Phi-3 Gradio demo](/src/assets/Phi-3_Gradio_demo.gif)
+![Phi-3 Gradio demo](/cookbook/src/assets/Phi-3_Gradio_demo.gif)
 
 [Return to top](#top)
 
