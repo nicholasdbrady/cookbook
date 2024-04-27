@@ -41,23 +41,9 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 ![blog local placeholder](/blog-placeholder-about.jpg)
 
-<!--
-[blog local . placeholder](./blog-placeholder-about.jpg)
-
-![blog local .. placeholder](../blog-placeholder-about.jpg) 
--->
-
 ![blog relative assets placeholder](/assets/blog-placeholder-about.jpg)
 
-<!-- ![blog relative assets . placeholder](./assets/blog-placeholder-about.jpg) -->
-
-<!-- ![blog relative assets .. placeholder](../assets/blog-placeholder-about.jpg) -->
-
 ![blog relative src placeholder](/src/assets/blog-placeholder-about.jpg)
-
-<!-- ![blog relative src . placeholder](./src/assets/blog-placeholder-about.jpg) -->
-
-<!-- ![blog relative src .. placeholder](../src/assets/blog-placeholder-about.jpg) -->
 
 ![blog root placeholder](/cookbook/src/assets/blog-placeholder-about.jpg)
 
