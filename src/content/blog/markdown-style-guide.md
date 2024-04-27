@@ -49,7 +49,7 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 ![blog relative assets placeholder](/assets/blog-placeholder-about.jpg)
 
-![blog relative assets . placeholder](./assets/blog-placeholder-about.jpg)
+<!-- ![blog relative assets . placeholder](./assets/blog-placeholder-about.jpg) -->
 
 ![blog relative assets .. placeholder](../assets/blog-placeholder-about.jpg)
 
