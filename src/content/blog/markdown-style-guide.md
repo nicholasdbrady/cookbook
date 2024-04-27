@@ -39,7 +39,35 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 #### Output
 
-![blog placeholder](/cookbook/blog-placeholder-about.jpg)
+<!-- A local image relative to the markdown file -->
+
+![A local image](./images/landscape.jpg)
+
+<!-- A local image relative to the project root -->
+
+![Another local image](../src/images/landscape.jpg)
+
+<!-- An example of using query params -->
+
+![blog local placeholder](/blog-placeholder-about.jpg)
+
+![blog local . placeholder](./blog-placeholder-about.jpg)
+
+![blog local .. placeholder](../blog-placeholder-about.jpg)
+
+![blog relative assets placeholder](/assets/blog-placeholder-about.jpg)
+
+![blog relative assets . placeholder](./assets/blog-placeholder-about.jpg)
+
+![blog relative assets .. placeholder](../assets/blog-placeholder-about.jpg)
+
+![blog relative src placeholder](/src/assets/blog-placeholder-about.jpg)
+
+![blog relative src . placeholder](./src/assets/blog-placeholder-about.jpg)
+
+![blog relative src .. placeholder](../src/assets/blog-placeholder-about.jpg)
+
+![blog root placeholder](/cookbook/src/assets/blog-placeholder-about.jpg)
 
 ## Blockquotes
 
