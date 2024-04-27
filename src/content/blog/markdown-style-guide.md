@@ -55,9 +55,9 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 ![blog relative src placeholder](/src/assets/blog-placeholder-about.jpg)
 
-![blog relative src . placeholder](./src/assets/blog-placeholder-about.jpg)
+<!-- ![blog relative src . placeholder](./src/assets/blog-placeholder-about.jpg) -->
 
-![blog relative src .. placeholder](../src/assets/blog-placeholder-about.jpg)
+<!-- ![blog relative src .. placeholder](../src/assets/blog-placeholder-about.jpg) -->
 
 ![blog root placeholder](/cookbook/src/assets/blog-placeholder-about.jpg)
 
