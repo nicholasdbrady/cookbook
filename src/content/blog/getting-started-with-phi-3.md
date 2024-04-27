@@ -27,7 +27,7 @@ Azure AI developers, prepare to welcome the newest family member in the world of
 The first to make a debut is the Phi-3-mini, a model with 3.8 billion parameters that boasts performance surpassing models twice its size. This marvel of AI architecture is not only more capable but also available now in the Microsoft Azure AI Model Catalog, Hugging Face, and as a NVIDIA NIM microservice. Its nimbleness allows it to operate fluently across various platforms and even on local devices, a feature that guarantees to democratize AI applications further.
 
 <!-- Local image stored at public/assets/stars.png -->
-![Phi-3 quality](/cookbook/src/assets/Phi-3-quality.png)
+![Phi-3 quality](https://github.com/nicholasdbrady/cookbook/blob/main/src/assets/Phi-3-quality.png?raw=true)
 
 ### Use Cases  
 - **Local Operation**: Deploy AI in remote areas or on devices with limited connectivity.  
@@ -43,7 +43,7 @@ Before you dive into using Phi-3, you'll need to set up an Azure account if you 
 #### Step 2: Access the Azure AI Model Catalog
 Once your account is set up, navigate to the [Azure AI Model Catalog](https://aka.ms/try-phi3) where you'll find the Phi-3 model(s) listed. You can also browse the 1500+ models available including, Meta, Mistral, Cohere and many more.
 
-![Phi-3 quality](/cookbook/src/assets/try-phi-3.png)
+![Phi-3 quality](https://github.com/nicholasdbrady/cookbook/blob/main/src/assets/try-phi-3.png?raw=true)
 
 #### Step 3: Deploy to an online managed endpoint
 You can deploy to a real-time endpoint from here directly!
@@ -236,7 +236,7 @@ gr.ChatInterface(
 ```
 This process creates a user-friendly chat interface for the Phi-3 model.
 
-![Phi-3 Gradio demo](/cookbook/src/assets/Phi-3_Gradio_demo.gif)
+![Phi-3 Gradio demo](https://github.com/nicholasdbrady/cookbook/blob/main/src/assets/Phi-3_Gradio_demo.gif?raw=true)
 
 [Return to top](#top)
 
