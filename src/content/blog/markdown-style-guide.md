@@ -39,16 +39,6 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 #### Output
 
-<!-- A local image relative to the markdown file -->
-
-![A local image](./images/landscape.jpg)
-
-<!-- A local image relative to the project root -->
-
-![Another local image](../src/images/landscape.jpg)
-
-<!-- An example of using query params -->
-
 ![blog local placeholder](/blog-placeholder-about.jpg)
 
 ![blog local . placeholder](./blog-placeholder-about.jpg)
