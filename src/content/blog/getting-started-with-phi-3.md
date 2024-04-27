@@ -26,6 +26,7 @@ Azure AI developers, prepare to welcome the newest family member in the world of
   
 The first to make a debut is the Phi-3-mini, a model with 3.8 billion parameters that boasts performance surpassing models twice its size. This marvel of AI architecture is not only more capable but also available now in the Microsoft Azure AI Model Catalog, Hugging Face, and as a NVIDIA NIM microservice. Its nimbleness allows it to operate fluently across various platforms and even on local devices, a feature that guarantees to democratize AI applications further.
 
+<!-- Local image stored at public/assets/stars.png -->
 ![Phi-3 quality](/cookbook/src/assets/Phi-3-quality.png)
 
 ### Use Cases  
