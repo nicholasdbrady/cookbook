@@ -1,4 +1,5 @@
 <img src="https://github.com/nicholasdbrady/cookbook/blob/main/public/favicon.svg?raw=true" width="40" height="40">
+
 # Nick's Unofficial Azure AI Cookbook
 
 > ✨ Navigate to **[nicholasdbrady.github.io](https://nicholasdbrady.github.io/cookbook/)**
