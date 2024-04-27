@@ -39,10 +39,6 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 #### Output
 
-![blog relative src placeholder](/src/assets/blog-placeholder-about.jpg)
-
-![blog root placeholder](/cookbook/src/assets/blog-placeholder-about.jpg)
-
 ![blog github placeholder](https://github.com/nicholasdbrady/cookbook/blob/main/src/assets/blog-placeholder-about.jpg?raw=true)
 
 ## Blockquotes

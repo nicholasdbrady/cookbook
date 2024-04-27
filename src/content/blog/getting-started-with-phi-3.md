@@ -8,7 +8,8 @@ tags: ["Azure AI", "Phi-3", "Model catalog", "Generative AI", "Gradio"]
 
 In this walkthrough, I'll show you how to get started with `phi-3-mini-instruct` with the Azure AI Model Catalog. We will deploy the model to an endpoint, test the endpoint, and build a simple chat interface using Gradio.
 
-[comment]: <> (Add a table of contents with referenceable links to click to each section in the blog.)
+<!-- Add a link to the https://github.com/nicholasdbrady/cookbook/examples folder highlighting that this blog is based on my Getting started with Phi-3 Jupyter notebook -->
+> This post is based on a Jupyter notebook I created you can use alongside this walkthrough. Find it here: [Getting started with Phi-3](https://github.com/nicholasdbrady/cookbook/examples/Phi-3)
 
 #### Table of Contents
  - [Introduction](#introduction)
