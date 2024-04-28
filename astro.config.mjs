@@ -7,6 +7,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://nicholasdbrady.github.io',
   base: '/cookbook/',
-  trailingSlash: 'ignore',
+  trailingSlash: 'always',
   integrations: [mdx(), sitemap()]
 });
