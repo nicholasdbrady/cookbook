@@ -6,10 +6,10 @@ heroImage: '/cookbook/phi-3-hero.png'
 tags: ["Azure AI", "Phi-3", "Model catalog", "Generative AI", "Gradio"]
 ---
 
-In this walkthrough, I'll show you how to get started with `phi-3-mini-instruct` with the Azure AI Model Catalog. We will deploy the model to an endpoint, test the endpoint, and build a simple chat interface using Gradio.
+In this walkthrough, I'll show you how to get started with `phi-3-mini-instruct` with the Azure AI Model catalog. We will deploy the model to an endpoint, test the endpoint, and build a simple chat interface using Gradio.
 
 <!-- Add a link to the https://github.com/nicholasdbrady/cookbook/examples folder highlighting that this blog is based on my Getting started with Phi-3 Jupyter notebook -->
-> This post is based on a Jupyter notebook I created you can use alongside this walkthrough. Find it here: [Getting started with Phi-3](https://github.com/nicholasdbrady/cookbook/examples/Phi-3)
+> This post is based on a Jupyter notebook example I created. You can use it alongside this walkthrough. Find it here: [Getting started with Phi-3](https://github.com/nicholasdbrady/cookbook/blob/main/examples/phi-3/getting-started-with-phi-3.ipynb)
 
 #### Table of Contents
  - [Introduction](#introduction)
@@ -43,26 +43,27 @@ The first to make a debut is the Phi-3-mini, a model with 3.8 billion parameters
 Before you dive into using Phi-3, you'll need to set up an Azure account if you don't already have one. Visit the Azure website and follow the sign-up instructions. 
 
 #### Step 2: Access the Azure AI Model Catalog
-Once your account is set up, navigate to the [Azure AI Model Catalog](https://aka.ms/try-phi3) where you'll find the Phi-3 model(s) listed. You can also browse the 1500+ models available including, Meta, Mistral, Cohere and many more.
+Once your account is set up, navigate to the [Azure AI Model Catalog](https://aka.ms/try-phi3) where you'll find the Phi-3 model(s) listed. You can also browse more than 1500+ frontier and open models from LLM providers including: HuggingFace, Meta, Mistral, Cohere and many more.
 
 ![Phi-3 quality](https://github.com/nicholasdbrady/cookbook/blob/main/src/assets/try-phi-3.png?raw=true)
 
 #### Step 3: Deploy to an online managed endpoint
 You can deploy to a real-time endpoint from here directly!
 Optionally, you can use the Azure AI Generative AI SDK to deploy any model from the model catalog. [Here](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/ai-studio/how-to/deploy-models-open.md) is an example you can follow.
-Under Versions, if you select the elipses (...) under the Properties column, you can find the recommended virtual machine skus to run Phi-3:
+Under Versions, if you select the elipses (...) under the Properties column, you can find the recommended virtual machine skus within Azure Machine Learning to run Phi-3 in the cloud:
 `Standard_NC6s_v3`, `Standard_NC12s_v3`, `Standard_NC24s_v3`, `Standard_ND40rs_v2`, `Standard_NC24ads_A100_v4`, `Standard_NC48ads_A100_v4`, `Standard_NC96ads_A100_v4`, `Standard_ND96asr_v4`, `Standard_ND96amsr_A100_v4`.
-> **Note**: phi-3-mini is a small model, so smaller VMs will do for this demo.
+> **Note**: `phi-3-mini-instruct` is small enough to run on a local device, so smaller VMs will work for this demo.
 
 [Return to top](#top)
 ### Call an Azure Online Managed Endpoint  
-Instead of fine-tuning the model, which can be complex for beginners, you might want to immediately start using the Phi-3 model through an Azure Managed Online Endpoint. Azure Managed Online Endpoints allow you to deploy your models as a web service easily, so you can send data to your model and receive predictions in return.  
+You can immediately start using the Phi-3 model through an Azure Managed Online Endpoint. Azure Managed Online Endpoints allow you to deploy your models as a web service easily, so you can send data to your model and receive predictions in return.  
   
-Here's a simple walkthrough on how you call the Phi-3 Online Managed Endpoint:  
+Now that we've got the endpoint up and running, next we will walk through how to call the endpoint:  
+
 [Return to top](#top)
 #### Make sure you have the following prerequisites:  
 - An Azure Machine Learning workspace  
-- The `requirements.txt` Python packages installed  
+- The `requirements.txt` [Python packages](https://github.com/nicholasdbrady/cookbook/blob/main/examples/phi-3/requirements.txt) installed  
 - An instance of the Phi-3 model deployed to an Online Endpoint  
 
 In this step, we are importing the necessary libraries. `MLClient` is the main class that we use to interact with Azure AI. `DefaultAzureCredential` and `InteractiveBrowserCredential` are used for authentication purposes. The `os` library is used to access environment variables.
@@ -90,7 +91,7 @@ workspace_ml_client = MLClient(
 ```
   
 #### Optional: Loading a dataset with prompt examples
-This step is optional and not required to demo Phi-3. However, if you want to experiment with different topics for the model, you can use a dataset. In this case, we are using the `ultrachat_200k` dataset from Hugging Face. First, we import the necessary libraries: `pandas` for data manipulation and `datasets` for loading the dataset.
+This step is optional and not required to demo Phi-3. However, if you want to experiment with samples of diverse topics for the model, you can use a dataset. In this case, we are using the `ultrachat_200k` dataset from HuggingFace. First, we import the necessary libraries: `pandas` for data manipulation and `datasets` for loading the dataset.
 
 Next, we load the [ultrachat_200k dataset from Hugging Face](https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k) and select the `test_sft` split.
 
@@ -117,6 +118,7 @@ sample = examples[i]
 print(sample)
 ```
 This process ensures that we have a diverse range of topics to test our model with, and that the testing process is as unbiased as possible. 
+
 [Return to top](#top)
 
 #### Invoking the Phi-3 Model
@@ -125,6 +127,10 @@ In this section, we are invoking the Phi-3 model to generate a response to a use
 First, we define the input data. This includes the user's message and some parameters for the model. The parameters control the randomness of the model's output.
 
 Next, we write the input data to a temporary file. This is necessary because the `invoke` method of the `workspace_ml_client.online_endpoints` object requires a file as input.
+
+You will find the `endpoint_name` and `deployment_name` details available under Build > Components > Deployments > then, select the deployment you created. You'll find this `deployment_name` available under the <font color="blue">blue rectangle</font> and the `endpoint_name` under the <font color="green">green rectangle</font>. The endpoint name will look like this: **https://`endpoint_name`.azureregion.inference.ml.azure.com/score**. Here's an example:
+
+![online-endpoint](https://github.com/nicholasdbrady/cookbook/blob/main/src/assets/online-endpoint.png?raw=true)
 
 We then invoke the Phi-3 model and get the response. The `invoke` method sends the input data to the model and returns the model's output.
 
@@ -140,7 +146,7 @@ with tempfile.NamedTemporaryFile(suffix=".json", delete=False, mode='w') as temp
     temp_file_name = temp.name
 
 response = workspace_ml_client.online_endpoints.invoke(
-    endpoint_name="aistudio-nbrady-phi-3",
+    endpoint_name="phi-3-mini-endpoint",
     deployment_name="phi-3-mini-4k-instruct",
     request_file=temp_file_name,
 )
