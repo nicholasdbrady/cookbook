@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://nicholasdbrady.github.io',
-  base: '/cookbook',
+  base: '/cookbook/',
   trailingSlash: 'ignore',
   integrations: [mdx(), sitemap()]
 });
