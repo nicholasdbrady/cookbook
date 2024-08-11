@@ -1,0 +1,7 @@
+azure-ai-inference
+azure-core
+gradio
+gradio-client
+ipykernel
+datasets
+pandas
