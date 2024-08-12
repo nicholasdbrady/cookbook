@@ -12,7 +12,13 @@ In this walkthrough, I'll show you how to get started with deplying fronter mode
 <!-- Add a link to the https://github.com/nicholasdbrady/cookbook/examples folder highlighting that this blog is based on my Getting started with Phi-3 Jupyter notebook -->
 > This post is based on a Jupyter notebook example I created. You can use it alongside this walkthrough. Find it here: [Azure AI Models-as-a-Service Chatbot Arena](https://github.com/nicholasdbrady/cookbook/blob/main/examples/maas-arena/azure-ai-models-as-a-service-chatbot-arena.ipynb)
 
-# The Paradox of Choice: Creating an Arena to Compare Frontier Models in Azure AI
+## Table of Contents
+- [Introduction](#introduction)
+- [Azure AI Models-as-a-Service (MaaS)](#azure-ai-models-as-a-service-maas)
+- [Deploy models as Serverless APIs](#deploy-models-as-serverless-apis)
+- [Introducing the Azure AI Model Inference API](#introducing-the-azure-ai-model-inference-api)
+- [Step-by-Step Walkthrough to Build the Azure AI Models-as-a-Service (MaaS) Chatbot Arena](#step-by-step-walkthrough-to-build-the-azure-ai-models-as-a-service-maas-chatbot-arena)
+- [Conclusion](#conclusion)
 
 ## Introduction
 
