@@ -116,6 +116,10 @@ pre {
 pre > code {
 	all: unset;
 }
+pre.astro-code.github-dark {
+    font-size: 14px;
+    padding: 16px;
+}
 blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
