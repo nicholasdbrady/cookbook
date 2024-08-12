@@ -1,10 +1,11 @@
 ---
 title: 'The Paradox of Choice: Creating an Arena to Compare Frontier Models in Azure AI'
-description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
+description: 'Addressing the challenge of comparing the quality of large language models in Azure AI.'
 pubDate: 'Aug 11 2024'
 heroImage: '/cookbook/maas-arena-hero.png'
 tags: ["Azure AI", "Model catalog", "Models-as-a-Service", "MaaS", "Generative AI", "Gradio"]
 ---
+
 
 In this walkthrough, I'll show you how to get started with deplying fronter models via serverless APIs in the Azure AI Model catalog. We will deploy several models to an endpoint, then build a chat arena to compare frontier models side-by-side using Gradio.
 
