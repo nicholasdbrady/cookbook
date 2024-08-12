@@ -2,7 +2,7 @@
 title: 'The Paradox of Choice: Creating an Arena to Compare Frontier Models in Azure AI'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: 'Aug 11 2024'
-heroImage: '/cookbook/maas-arena.png'
+heroImage: '/cookbook/maas-arena-hero.png'
 tags: ["Azure AI", "Model catalog", "Models-as-a-Service", "MaaS", "Generative AI", "Gradio"]
 ---
 
