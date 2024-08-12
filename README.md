@@ -18,6 +18,9 @@ Inside of this project, you'll find notebooks in my `examples` folder:
 ├── examples/
 │   ├── phi-3/
 |       |── getting-started-with-phi-3.ipynb
+|   ├── maas-arena/
+|       |── azure-ai-models-as-a-service-chatbot-arena.ipynb
+|       |── maas_clients.py
 |   |── **more coming soon!**
 ```
 
