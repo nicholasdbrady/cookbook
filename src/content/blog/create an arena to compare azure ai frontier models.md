@@ -7,9 +7,9 @@ tags: ["Azure AI", "Model catalog", "Models-as-a-Service", "MaaS", "Generative A
 ---
 
 
-In this walkthrough, I'll show you how to get started with deplying fronter models via serverless APIs in the Azure AI Model catalog. We will deploy several models to an endpoint, then build a chat arena to compare frontier models side-by-side using Gradio.
+In this walkthrough, I'll show you how to get started with deploying frontier models via serverless APIs in the Azure AI Model catalog. We will deploy several models to an endpoint, then build a chat arena to compare frontier models side-by-side using Gradio.
 
-<!-- Add a link to the https://github.com/nicholasdbrady/cookbook/examples folder highlighting that this blog is based on my Getting started with Phi-3 Jupyter notebook -->
+<!-- Add a link to the https://github.com/nicholasdbrady/cookbook/examples folder highlighting that this blog is based on my Jupyter notebook -->
 > This post is based on a Jupyter notebook example I created. You can use it alongside this walkthrough. Find it here: [Azure AI Models-as-a-Service Chatbot Arena](https://github.com/nicholasdbrady/cookbook/blob/main/examples/maas-arena/azure-ai-models-as-a-service-chatbot-arena.ipynb)
 
 ## Table of Contents
