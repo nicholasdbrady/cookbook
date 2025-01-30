@@ -16,11 +16,13 @@ Inside of this project, you'll find notebooks in my `examples` folder:
 
 ```text
 ├── examples/
-│   ├── phi-3/
-|       |── getting-started-with-phi-3.ipynb
+│   ├── deepseek/
+|       |── deepseek-r1-with-azure-ai-foundry-and-gradio.ipynb
 |   ├── maas-arena/
 |       |── azure-ai-models-as-a-service-chatbot-arena.ipynb
 |       |── maas_clients.py
+│   ├── phi-3/
+|       |── getting-started-with-phi-3.ipynb
 |   |── **more coming soon!**
 ```
 

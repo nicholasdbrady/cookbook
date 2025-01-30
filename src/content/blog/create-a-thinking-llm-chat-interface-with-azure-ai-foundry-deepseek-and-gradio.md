@@ -195,6 +195,6 @@ We covered:
 - Implementing real-time streaming responses.
 - Deploying the chatbot using Gradio.
 
-Get started today by visiting **[Azure AI Foundry](https://azure.microsoft.com/en-us/products/ai-services/ai-foundry)** and **[DeepSeek on GitHub](https://github.com/DeepSeekAI/DeepSeek-R1)**.
+Get started today by visiting **[DeepSeek R1 Azure AI Foundry Model Catalog](https://ai.azure.com/explore/models/DeepSeek-R1/version/1/registry/azureml-deepseek)** or **[DeepSeek on GitHub Models](https://github.com/marketplace/models/azureml-deepseek/DeepSeek-R1)**.
 
 Happy coding! 🚀
