@@ -18,7 +18,7 @@ In this walkthrough, you'll learn how to build an enterprise-grade streaming AI 
 - [Detailed Walkthrough](#detailed-walkthrough)
 - [Conclusion](#conclusion)
 
-[Return to top](#enterprise-grade-streaming-ai-agents-with-azure-ai-agent-service)
+[Return to top](#top)
 
 ## Introduction
 
@@ -32,7 +32,7 @@ This post will guide you through:
 - Streaming partial responses in real time with a custom event handler.
 - Building an interactive chat interface with Gradio.
 
-[Return to top](#enterprise-grade-streaming-ai-agents-with-azure-ai-agent-service)
+[Return to top](#top)
 
 ## Repository Overview
 
@@ -67,7 +67,7 @@ A few highlights:
 - **enterprise-data/**: Includes HR policies and other internal documents that the agent uses for context.
 - **.env.example**: Provides environment variable configurations for secret keys and connection strings.
 
-[Return to top](#enterprise-grade-streaming-ai-agents-with-azure-ai-agent-service)
+[Return to top](#top)
 
 ## Key Features
 
@@ -79,7 +79,7 @@ This demo guides you through creating a robust enterprise agent with features su
 - **Real-Time Streaming**: Display partial agent responses as they stream from the server using a custom event handler.
 - **Interactive Gradio UI**: A Gradio interface that mirrors real-world chat applications, making it easy to test and extend.
 
-[Return to top](#enterprise-grade-streaming-ai-agents-with-azure-ai-agent-service)
+[Return to top](#top)
 
 ## Setup and Installation
 
@@ -121,7 +121,7 @@ cp .env.example .env
 ```
 > Note: Be sure to keep your credentials safe and add `.env` to your `.gitignore`.
 
-[Return to top](#enterprise-grade-streaming-ai-agents-with-azure-ai-agent-service)
+[Return to top](#top)
 
 ## Detailed Walkthrough
 The core logic of the enterprise agent is demonstrated in the Jupyter Notebook. Here’s an overview of the main steps:
@@ -195,7 +195,7 @@ demo.launch()
 
 You can examine the full notebook for more complete details on configuring the tools, handling events, and managing conversation threads.
 
-[Return to top](#enterprise-grade-streaming-ai-agents-with-azure-ai-agent-service)
+[Return to top](#top)
 
 ## Conclusion
 ![Streaming Enterprise Agent](https://github.com/nicholasdbrady/cookbook/blob/main/src/assets/agent-service-demo.gif?raw=true)
@@ -205,4 +205,4 @@ This repository serves as a comprehensive blueprint for developers looking to de
 
 Happy innovating!
 
-[Return to top](#enterprise-grade-streaming-ai-agents-with-azure-ai-agent-service)
+[Return to top](#top)
