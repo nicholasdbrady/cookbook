@@ -8,6 +8,7 @@ export async function GET(context) {
 
 	// Get the absolute site URL from the context (configured in astro.config.mjs)
 	const siteUrl = context.site;
+	const basePath = '/cookbook/'; // Your configured base
 
 	// Process each post to create an RSS feed item.
 	const items = await Promise.all(posts.map(async (post) => {
@@ -23,7 +24,7 @@ export async function GET(context) {
 		return {
 			title: post.data.title,
 			// Construct the link using your collection's URL structure
-			link: `/blog/${post.slug}/`,
+			link: new URL(`blog/${post.slug}/`, siteUrl + basePath).href,
 			pubDate: post.data.pubDate,
 			// Use a short summary as description; if you want to include the full content, set it in content
 			description: post.data.description,
