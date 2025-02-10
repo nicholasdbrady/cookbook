@@ -1,48 +1,42 @@
-import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
+import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 export async function GET(context) {
-	// Fetch all blog posts; filter out drafts (assuming you use a `draft` flag in frontmatter)
-	const posts = await getCollection('blog', ({ data }) => !data.draft);
+  // Get the raw site URL from context (ensure it's a string) and remove any trailing slash.
+  const rawSite = typeof context.site === 'string' ? context.site : context.site.href;
+  const trimmedSite = rawSite.replace(/\/$/, '');
+  
+  // Our configured base path from astro.config.mjs
+  const basePath = '/cookbook/';
+  // Construct the full site URL (e.g., "https://nicholasdbrady.github.io/cookbook/")
+  const fullSiteUrl = trimmedSite + basePath;
 
-	// Get the absolute site URL from the context (configured in astro.config.mjs)
-	const siteUrl = context.site;
-	const basePath = '/cookbook/'; // Your configured base
+  // Use pagesGlobToRssItems() to automatically generate RSS items from your blog pages.
+  // This assumes your published blog pages live in src/pages/blog/.
+  let items = await pagesGlobToRssItems(import.meta.glob('./blog/*.{astro,md,mdx}'));
 
-	// Process each post to create an RSS feed item.
-	const items = await Promise.all(posts.map(async (post) => {
-		// Render the post (if necessary) to get the HTML. 
-		// If your loader already produces HTML in post.body, you can skip this.
-		const { Content } = await post.render();
+  // Filter out the dynamic route file (i.e. [...slug].astro) which doesn't have its own frontmatter.
+  items = items.filter(item => !item.file.includes('[...slug]'));
 
-		// If your frontmatter includes a heroImage (a relative path), convert it to an absolute URL
-		const heroImageHTML = post.data.heroImage
-			? `<p><img src="${new URL(post.data.heroImage, siteUrl).href}" alt="${post.data.title} Hero Image" /></p>`
-			: '';
+  // Post-process each item so that its link and guid are built from the fullSiteUrl.
+  items = items.map(item => {
+    // Remove any leading slash from the item.link (if present)
+    const relativePath = item.link.startsWith('/') ? item.link.substring(1) : item.link;
+    // Build the final URL using fullSiteUrl as the base.
+    const fixedLink = new URL(relativePath, fullSiteUrl).href;
+    return {
+      ...item,
+      link: fixedLink,
+      guid: fixedLink,
+    };
+  });
 
-		return {
-			title: post.data.title,
-			// Construct the link using your collection's URL structure
-			link: new URL(`blog/${post.slug}/`, siteUrl + basePath).href,
-			pubDate: post.data.pubDate,
-			// Use a short summary as description; if you want to include the full content, set it in content
-			description: post.data.description,
-			// Prepend the hero image (if available) to the post body
-			content: heroImageHTML + post.body,
-			// Include categories if available (from your frontmatter, e.g., tags)
-			categories: post.data.tags || [],
-			// (Optional) Add an author field if you want
-			author: post.data.author || undefined,
-		};
-	}));
-
-	return rss({
-		title: SITE_TITLE,                // Your feed title
-		description: SITE_DESCRIPTION,    // A short description of your feed
-		site: siteUrl,                    // The absolute base URL of your site
-		items,                           // The array of RSS feed items you just created
-		trailingSlash: false,
-	});
+  return rss({
+    title: SITE_TITLE,                   // Your feed title
+    description: SITE_DESCRIPTION,       // Your feed description
+    site: fullSiteUrl,                   // Ensures the channel <link> includes the base path
+    items,                             // The list of RSS items with full HTML content
+    trailingSlash: true,
+    customData: `<language>en-us</language>`, // Optional extra XML data
+  });
 }
-
